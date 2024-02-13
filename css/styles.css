@@ -88,6 +88,11 @@ main img
     height: auto;
 }
 
+footer img
+{
+    max-width: 90%;
+}
+
 main .breakfasts img
 {
     height: 100%;
@@ -101,9 +106,11 @@ main .breakfasts img
 
 footer .coverage-map
 {
-    max-width: 450px;
+    max-width: 80%;
     object-fit: cover;
     object-position: center;
+    border: solid 2px var(--secondary);
+    border-radius: 8%;
 }
 
 
@@ -179,7 +186,7 @@ header span, footer span, main span, nav ul .name-logo h1
 
 main section h2
 {
-    margin-bottom: var(--dimen-medium);
+    margin-block: var(--dimen-medium);
 }
 
 
@@ -224,14 +231,14 @@ footer
     padding-bottom: var(--dimen-medium);
 }
 
+footer .coverage-map
+{
+    margin-block: var(--dimen-medium);
+}
+
 .copyright
 {
     padding: var(--dimen-medium) var(--dimen-small);
-}
-
-footer .footer-body img
-{
-    padding-inline: var(--dimen-large);
 }
 
 
@@ -380,6 +387,7 @@ main section .breakfasts
     display: grid;
     grid-template: auto / auto;
     gap: var(--dimen-medium);
+    padding-bottom: var(--dimen-large);
 }
 
 main section .breakfasts article
@@ -415,6 +423,14 @@ main .topic
         max-height: 45vw;
     }
 
+    footer .coverage-map
+    {
+        max-width: 450px;
+        object-fit: cover;
+        object-position: center;
+    }
+
+
     nav ul
     {
         justify-content: space-between;
@@ -434,16 +450,7 @@ main .topic
 
 @media (min-width: 750px)
 {
-    main section .breakfasts
-    {
-        grid-template-columns: repeat(3, 1fr);
-        gap: var(--dimen-large);
-    }
 
-    .image-container
-    {
-        max-height: 30vw;
-    }
 
     nav ul .name-logo
     {
@@ -463,6 +470,7 @@ main .topic
     footer .footer-body
     {
         grid-template-columns: repeat(2, 1fr);
+        padding-block: var(--dimen-large);
     }
 
     footer .footer-body .footer-column:nth-of-type(3)
@@ -482,6 +490,8 @@ main .topic
     {
         grid-template-columns: repeat(4, 1fr);
         gap: var(--dimen-large);
+        padding-block: var(--dimen-large);
+        margin-block: var(--dimen-large);
     }
 
     .image-container
@@ -514,17 +524,17 @@ main .topic
 
     footer .footer-body .footer-column:nth-of-type(3)
     {
-        order: 2;
+        order: 1;
         grid-column: span 3;
         display: flex;
-        justify-content: center;
+        justify-content: space-evenly;
         align-items: center;
         margin-top: var(--dimen-large);
     }
 
-    footer .footer-body .footer-column:last-of-type
+    footer .footer-body .footer-column:not(.footer-column:nth-of-type(3))
     {
-        order: 1;
+        order: 2;
         grid-area: auto;
     }
 }

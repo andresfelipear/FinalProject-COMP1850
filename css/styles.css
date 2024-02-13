@@ -93,7 +93,7 @@ footer img
     max-width: 90%;
 }
 
-main .breakfasts img
+main .breakfasts img, main .details img
 {
     height: 100%;
 }
@@ -129,9 +129,24 @@ a:hover
 /* Style ul */
 ul
 {
-    list-style: none;
     padding: 0px;
+    list-style: none;
+    text-align: left;
 }
+
+/* Change the color of the star */
+main li::before {
+    content: "";
+    display: inline-block;
+    background-image: url("../images/ic_start.svg");
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: 14px 14px;
+    width: 14px;
+    height: 14px;
+    margin-right: var(--dimen-small);
+}
+
 
 /* Fonts */
 nav ul li h1
@@ -162,6 +177,17 @@ main .topic p
     text-align: justify;
 }
 
+.details article p
+{
+    font-weight: 600;
+}
+
+main a:hover
+{
+    font-weight: bold;
+}
+
+
 
 /* Margin */
 h1, h2, h3
@@ -189,12 +215,23 @@ main section h2
     margin-block: var(--dimen-medium);
 }
 
+.details article p
+{
+    margin-block: var(--dimen-medium);
+}
+
+main .details article
+{
+    margin-bottom: var(--dimen-large);
+}
+
+main .details article button
+{
+    margin-top: var(--dimen-medium);
+}
+
 
 /* Padding */
-nav
-{
-    padding-block: var(--dimen-small);
-}
 
 section
 {
@@ -218,12 +255,28 @@ footer .footerColumn, header, footer .payment-methods
 
 nav ul li a
 {
-    padding: var(--dimen-small);
+    padding-inline: var(--dimen-small);
+    padding-block: var(--dimen-medium);
 }
 
 nav ul .name-logo a
 {
     padding: 0px;
+}
+
+main section ul
+{
+    padding-left: var(--dimen-small);
+}
+
+main .details article
+{
+    padding-bottom: 0px;
+}
+
+main .details article button
+{
+    padding: var(--dimen-small);
 }
 
 footer
@@ -297,9 +350,10 @@ main a
     text-decoration: underline;
 }
 
-main a:hover
+main .details article button
 {
-    font-weight: bold;
+    background-color: #fff;
+    color: var(--primary);
 }
 
 footer .payment-methods
@@ -319,6 +373,12 @@ main section article
     border-radius: .25rem;
     box-shadow: 0 0.5em 1em -0.125em rgba(10,10,10,.1),
      0 0 0 1px rgba(10,10,10,.02);
+}
+
+main .details article button
+{
+    border: solid 1px var(--primary);
+    border-radius: 4px;
 }
 
 
@@ -365,6 +425,7 @@ nav ul
     display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
+    list-style: none;
 }
 
 nav .name-logo, nav .right-nav, nav .side-content
@@ -382,7 +443,7 @@ nav ul .name-logo
 
 
 /* main */
-main section .breakfasts
+main section .breakfasts, main .details article
 {
     display: grid;
     grid-template: auto / auto;
@@ -403,9 +464,32 @@ main .topic
     margin: auto;
 }
 
-.image-container
+main .breakfasts .image-container
 {
     max-height: 90vw;
+}
+
+main .details article .image-container
+{
+    max-height: 350px;
+    max-width: 350px;
+}
+
+main .details
+{
+    width: fit-content;
+    margin: auto;
+}
+
+
+main .details .article-content
+{
+    margin: auto;
+}
+
+main .details article button:hover
+{
+    cursor: pointer;
 }
 
 
@@ -418,18 +502,17 @@ main .topic
         gap: var(--dimen-large);
     }
 
-    .image-container
+    main .breakfasts .image-container
     {
         max-height: 45vw;
     }
-
+  
     footer .coverage-map
     {
         max-width: 450px;
         object-fit: cover;
         object-position: center;
     }
-
 
     nav ul
     {
@@ -445,12 +528,17 @@ main .topic
     {
         margin-left: var(--dimen-medium);
     }
+
 }
 
 
 @media (min-width: 750px)
 {
-
+    main .details article .image-container
+    {
+        max-width: 450px;
+        max-height: 450px;
+    }
 
     nav ul .name-logo
     {
@@ -465,6 +553,12 @@ main .topic
     main section h2
     {
         margin-bottom: var(--dimen-large);
+    }
+
+    main .details article
+    {
+        display: flex;
+        flex-direction: row;
     }
 
     footer .footer-body
@@ -494,7 +588,7 @@ main .topic
         margin-block: var(--dimen-large);
     }
 
-    .image-container
+    main .breakfasts .image-container
     {
         max-height: 22vw;
     }

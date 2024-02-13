@@ -31,7 +31,7 @@ html
 body
 {    
     margin:0px;
-    font-family: sans-serif;
+    font-family: "Roboto Condensed", sans-serif;
 }
 
 /*
@@ -46,7 +46,8 @@ h6{ font-size: 1.0em; 	}
 
 h1, h2, h3, h4, h5, h6
 {
-    font-family: 'Courier New', Courier, monospace;
+    font-family: cursive;
+    font-weight: 400;
 }
 
 
@@ -85,7 +86,7 @@ main .breakfasts img
 a
 {
     text-decoration: none;
-    color: var(--secondary);
+    color: var(--four);
 }
 
 a:hover
@@ -104,11 +105,6 @@ ul
 nav ul li h1
 {
     font-size: var(--dimen-medium);
-}
-
-main section article h3
-{
-    font-size: 1.5rem;
 }
 
 .copyright
@@ -221,6 +217,11 @@ nav
     background-color: var(--secondary);
 }
 
+nav h1
+{
+    color: var(--third);
+}
+
 nav .cart
 {
     color: var(--primary);
@@ -296,6 +297,12 @@ header
 {
     display: flex;
     justify-content: space-evenly;
+}
+
+footer .social-media
+{
+    display: flex;
+    gap: var(--dimen-medium);
 }
 
 /* nav */

@@ -6,6 +6,7 @@
     <title>Gifts & Surprise Breakfast | COMP1850 | BCIT</title>
     <link rel="stylesheet" href="../css/styles.css">
     <script src="https://kit.fontawesome.com/a531af1b8d.js" crossorigin="anonymous"></script>
+    <script src="../scripts/menu.js" defer="defer"></script>
 
     <!--Google fonts-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -34,12 +35,16 @@
                     <a href="#"><img class="logo" src="../images/ic_logo.png" alt="logo"/></a>
                     <h1>Surprises & Balloons</h1>
                 </li>
-                <div class="left-nav">
+                <div class="side-content">
                     <li>
                         <a href="#">Products</a>
                     </li>
-                    <li>
-                        <a href="#" class="menu"><span>More</span> <i class="fa-solid fa-caret-down"></i></a>
+                    <li class="dropdown">
+                        <a href="#"><span>More</span> <i class="fa-solid fa-caret-down"></i></a>
+                        <div class="dropdown-content">
+                            <a href="#">Delivery Policy</a>
+                            <a href="#">Contact </a>
+                        </div>
                     </li>      
                 </div>
                 <div class="right-nav">
@@ -56,12 +61,19 @@
             </ul>
         </nav>
         <main>
-            <img src="../images/banner.jpg" alt="banner">
+            <img src="../images/banner.png" alt="banner">
+            <section class="topic">
+                <p>
+                    We're here to turn moments into memories, connecting hearts through thoughtful surprises. Born during challenging times, our mission is to spread joy. Join us in celebrating life's occasions, big or small, with Surprises & Balloons.
+                </p>
+            </section>
             <section>
                 <h2>Favorite Products</h2>
                 <div class="breakfasts">
                     <article>
-                        <img src="../images/breakfasts/breakfast1.PNG" alt="dulce despertar">
+                        <div class="image-container">
+                            <img src="../images/breakfasts/breakfast1.PNG" alt="dulce despertar">
+                        </div>
                         <div class="article-content">
                             <div><i class="fa-regular fa-thumbs-up fa-lg"></i><span>20 likes</span></div>
                             <h3>Sweet Wakeup</h3>
@@ -70,8 +82,9 @@
                         </div> 
                     </article>
                     <article>
-                        <img src="../images/breakfasts/breakfast2.PNG" alt="dulce despertar">
-                        <div class="article-content">
+                        <div class="image-container">
+                            <img src="../images/breakfasts/breakfast2.PNG" alt="dulce despertar">
+                        </div>                        <div class="article-content">
                             <div><i class="fa-regular fa-thumbs-up fa-lg"></i><span>19 likes</span></div>
                             <h3>Sweet Mornings</h3>
                             <p>$78.00</p>
@@ -79,8 +92,9 @@
                         </div>     
                     </article>
                     <article>
-                        <img src="../images/breakfasts/breakfast3.PNG" alt="dulce despertar">
-                        <div class="article-content">
+                        <div class="image-container">
+                            <img src="../images/breakfasts/breakfast3.PNG" alt="dulce despertar">
+                        </div>                        <div class="article-content">
                             <div><i class="fa-regular fa-thumbs-up fa-lg"></i><span>13 likes</span></div>
                             <h3>Healthy Bucket</h3>
                             <p>$80.00</p>
@@ -88,8 +102,9 @@
                         </div>
                     </article>
                     <article>
-                        <img src="../images/breakfasts/breakfast4.PNG" alt="dulce despertar">
-                        <div class="article-content">
+                        <div class="image-container">
+                            <img src="../images/breakfasts/breakfast4.PNG" alt="dulce despertar">
+                        </div>                        <div class="article-content">
                             <div><i class="fa-regular fa-thumbs-up fa-lg"></i><span>11 likes</span></div>
                             <h3>My Love</h3>
                             <p>$53.00</p>
@@ -115,7 +130,7 @@
                 </div>
                 <div class="footer-column">
                     <h3>Coverage Map</h3>
-                    <img src="../images/coverage_map.jpg" alt="coverage map">
+                    <img class="coverage-map" src="../images/coverage_map.jpg" alt="coverage map">
                 </div>
                 <div class="footer-column">
                     <h3>Social Media</h3>

@@ -1,0 +1,338 @@
+/* load reset rules first */
+@import url("normalize.css");
+
+/* Colors */
+:root
+{
+    --primary: #905960;
+    --secondary: #FEECF0;
+    --third: #4A4A4A;
+    --four: #FFFFFF;
+    --fifth: #E3C8CC;
+    --six: #E8E8E8;
+
+    --dimen-small: 8px;
+    --dimen-medium: 16px;
+    --dimen-large: 24px;
+}
+
+/* all elements box-sizing:border-box; */
+html 
+{
+    box-sizing: border-box;
+}
+
+*, *:before, *:after 
+{
+    box-sizing: inherit;
+}
+
+/*remove gaps at edge of viewport*/
+body
+{    
+    margin:0px;
+    font-family: sans-serif;
+}
+
+/*
+Fonts size
+*/
+h1{ font-size: 1.9em; 	}
+h2{ font-size: 1.7em; 	}
+h3{ font-size: 1.4em; 	}
+h4{ font-size: 1.2em; 	}
+h5{ font-size: 1.1em; 	}
+h6{ font-size: 1.0em; 	}
+
+h1, h2, h3, h4, h5, h6
+{
+    font-family: 'Courier New', Courier, monospace;
+}
+
+
+/* Sticky Footer */
+#wrapper
+{
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: auto auto 1fr auto;
+    min-height: 100vh; 
+}
+
+/* Images size */
+img
+{
+    width: 100%;
+    height: auto;
+}
+
+main .breakfasts img
+{
+    height: 100%;
+    max-height: 300px;
+    object-fit: cover;
+    object-position: bottom;
+}
+
+.logo
+{
+    width: 40px;
+    height: auto;
+}
+
+
+/* Style all anchor tags */
+a
+{
+    text-decoration: none;
+    color: var(--secondary);
+}
+
+a:hover
+{
+    text-decoration: underline;
+}
+
+/* Style ul */
+ul
+{
+    list-style: none;
+    padding: 0px;
+}
+
+/* Fonts */
+nav ul li h1
+{
+    font-size: var(--dimen-medium);
+}
+
+main section article h3
+{
+    font-size: 1.5rem;
+}
+
+.copyright
+{
+    font-size: small;
+    font-style: italic;
+}
+
+
+/* Text styles */
+header, nav, footer, .copyright, main .breakfasts
+{
+    text-align: center;
+}
+
+.breakfasts .article-content div
+{
+    font-weight: bold;
+}
+
+
+/* Margin */
+h1, h2, h3
+{
+    margin: 0px 0px 8px;
+}
+
+p, ul
+{
+    margin: 0px;
+}
+
+nav ul li h1
+{
+    margin: 0px;
+}
+
+header span, footer span, main span
+{
+    margin-left: var(--dimen-small);
+}
+
+.breakfasts .article-content div, .breakfasts .article-content p
+{
+    margin-bottom: var(--dimen-medium);
+}
+
+
+/* Padding */
+nav
+{
+    padding-block: var(--dimen-small);
+}
+
+section
+{
+    padding: var(--dimen-large) var(--dimen-medium);
+}
+
+footer .footerColumn, header, footer .payment-methods
+{
+    padding-block: var(--dimen-medium);
+}
+
+.article-content
+{
+    padding: var(--dimen-medium);
+}
+
+nav ul li a
+{
+    padding: var(--dimen-small) 0px;
+}
+
+nav ul .name-logo a
+{
+    padding: 0px;
+}
+
+footer
+{
+    padding-bottom: var(--dimen-medium);
+}
+
+.copyright
+{
+    padding: var(--dimen-medium) var(--dimen-small);
+}
+
+footer .footer-body img
+{
+    padding-inline: var(--dimen-large);
+}
+
+
+/* Colors */
+body
+{
+    background-color: var(--fifth);
+}
+
+header, footer
+{
+    background-color: var(--primary);
+    color: var(--four);
+}
+
+nav
+{
+    background-color: var(--secondary);
+}
+
+nav .cart
+{
+    color: var(--primary);
+}
+
+main
+{
+    background-color: var(--four);
+}
+
+main h3
+{
+    color: var(--primary);
+    font-weight: 600;
+}
+
+nav ul li a
+{
+    color: var(--third);
+}
+
+nav a:hover
+{
+    color: var(--six);
+}
+
+main a
+{
+    color:var(--primary);
+    text-decoration: underline;
+}
+
+main a:hover
+{
+    font-weight: bold;
+}
+
+footer .payment-methods
+{
+    background-color: var(--secondary);
+}
+
+.copyright
+{
+    background-color: var(--four);
+}
+
+
+/* Border */
+main section article
+{
+    border-radius: .25rem;
+    box-shadow: 0 0.5em 1em -0.125em rgba(10,10,10,.1),
+     0 0 0 1px rgba(10,10,10,.02);
+}
+
+
+/* Header & Footer*/
+footer, footer .footer-body
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--dimen-small);
+}
+
+header .header-column h3, .header-column:nth-of-type(2)
+{
+    display: none;
+}
+
+header 
+{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+/* nav */
+nav ul li a
+{
+    display: block;
+}
+
+nav ul
+{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+nav .name-logo, nav .right-nav, nav .left-nav
+{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: var(--dimen-medium);
+}
+
+nav ul .name-logo
+{
+    width: 100%;
+}
+
+/* main */
+main section .breakfasts
+{
+    display: grid;
+    grid-template: auto / 100%;
+    gap: var(--dimen-medium);
+}
+
+
+
+

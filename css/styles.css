@@ -62,7 +62,6 @@ h1, h2, h3, h4, h5, h6
     display: none;
     position: absolute;
     background-color: #f9f9f9;
-    padding-inline: var(--dimen-medium);
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     z-index: 1;
 }
@@ -70,6 +69,7 @@ h1, h2, h3, h4, h5, h6
 .show
 {
     display: block;
+    padding: 0px;
 }
 
 /* Sticky Footer */
@@ -131,20 +131,37 @@ ul
 {
     padding: 0px;
     list-style: none;
-    text-align: left;
 }
 
-/* Change the color of the star */
-main li::before {
+ol
+{
+    padding-left: var(--dimen-large);
+    list-style: upper-roman;
+}
+
+ol li::marker
+{
+    color: var(--primary);
+    font-weight: bold;
+}
+
+
+/* Change default icon ul list */
+main ul li
+{
+    display: flex;
+    align-items: center;
+    gap: var(--dimen-small);
+}
+main ul li::before {
     content: "";
-    display: inline-block;
+    display: block;
     background-image: url("../images/ic_start.svg");
     background-position: center center;
     background-repeat: no-repeat;
     background-size: 14px 14px;
-    width: 14px;
+    min-width: 14px;
     height: 14px;
-    margin-right: var(--dimen-small);
 }
 
 
@@ -172,7 +189,7 @@ header, nav, footer, .copyright, main .breakfasts, h2
     font-weight: bold;
 }
 
-main .topic p
+main .topic p, main .section article ul, main .section p
 {
     text-align: justify;
 }
@@ -188,14 +205,13 @@ main a:hover
 }
 
 
-
 /* Margin */
-h1, h2, h3
+h1, h2, h3, h4, h5, h6
 {
     margin: 0px 0px 8px;
 }
 
-p, ul, nav ul li h1
+p, ul, nav ul li h1, blockquote
 {
     margin: 0px;
 }
@@ -212,17 +228,17 @@ header span, footer span, main span, nav ul .name-logo h1
 
 main section h2
 {
-    margin-block: var(--dimen-medium);
+    margin-top: var(--dimen-medium);
 }
 
-.details article p
+main .details article p, main .section article ul, main .section article p
 {
     margin-block: var(--dimen-medium);
 }
 
-main .details article
+main
 {
-    margin-bottom: var(--dimen-large);
+    padding-bottom: var(--dimen-large);
 }
 
 main .details article button
@@ -232,7 +248,6 @@ main .details article button
 
 
 /* Padding */
-
 section
 {
     padding: 0px var(--dimen-medium);
@@ -240,7 +255,7 @@ section
 
 main .topic
 {
-    padding: var(--dimen-medium) var(--dimen-large)
+    padding: var(--dimen-medium) var(--dimen-large) 0px var(--dimen-large)
 }
 
 footer .footerColumn, header, footer .payment-methods
@@ -248,9 +263,14 @@ footer .footerColumn, header, footer .payment-methods
     padding-block: var(--dimen-medium);
 }
 
-.article-content
+main article .article-content
 {
     padding: var(--dimen-medium);
+}
+
+main .section article
+{
+    padding: var(--dimen-medium) var(--dimen-medium);
 }
 
 nav ul li a
@@ -259,14 +279,14 @@ nav ul li a
     padding-block: var(--dimen-medium);
 }
 
+nav ul .dropdown-content a
+{
+    padding-inline: var(--dimen-medium);
+}
+
 nav ul .name-logo a
 {
     padding: 0px;
-}
-
-main section ul
-{
-    padding-left: var(--dimen-small);
 }
 
 main .details article
@@ -327,7 +347,7 @@ main
     background-color: var(--four);
 }
 
-main h3
+main h3, h4, h5, h6
 {
     color: var(--primary);
     font-weight: 600;
@@ -380,6 +400,66 @@ main .details article button
     border: solid 1px var(--primary);
     border-radius: 4px;
 }
+
+
+/* blockquote */
+blockquote
+{
+    background-color: var(--secondary);
+    border-left: solid 10px var(--primary);
+    border-radius: 7px;
+    padding: 1px 10px;
+}
+
+blockquote p
+{
+    font-weight: bold;
+    color: var(--third);
+}
+
+blockquote p cite
+{
+    font-weight: normal;
+    color: var(--third);
+}
+
+
+/* Code */
+pre
+{
+    color: var(--third);
+    border: solid 1px var(--primary);
+    background-color: var(--secondary);
+    border-radius: 7px;
+    padding: 5px;
+
+    /* wrap pre formatted tag */
+    white-space: pre-wrap; 
+    word-wrap: break-word;
+}
+
+/* Table */
+table
+{
+    font-size: medium;
+    background-color: var(--six);
+    border: solid 1px var(--primary);
+
+}
+
+table th
+{
+    color: var(--four);
+    background-color: var(--primary);
+}
+
+table td
+{
+    font-size: small;
+    background-color: var(--secondary);
+    border: solid 1px var(--fifth)
+}
+
 
 
 /* Header & Footer*/
@@ -451,6 +531,13 @@ main section .breakfasts, main .details article
     padding-bottom: var(--dimen-large);
 }
 
+main section
+{
+    display: grid;
+    grid-template: auto / auto;
+    gap: var(--dimen-medium);
+}
+
 main section .breakfasts article
 {
     display: grid;
@@ -464,13 +551,15 @@ main .topic
     margin: auto;
 }
 
-main .details article .image-container
+/* Details Product */
+main .image-container
 {
     max-height: 350px;
     max-width: 350px;
+    margin: auto;
 }
 
-main .details
+main .details, main .section
 {
     width: fit-content;
     margin: auto;
@@ -497,7 +586,6 @@ main .details article button:hover
         gap: var(--dimen-large);
     }
 
-  
     footer .coverage-map
     {
         max-width: 450px;
@@ -518,6 +606,11 @@ main .details article button:hover
     nav ul .name-logo
     {
         margin-left: var(--dimen-medium);
+    }
+
+    table td
+    {
+        font-size: var(--dimen-medium);
     }
 
 }
@@ -541,11 +634,6 @@ main .details article button:hover
         display: block;
     }
 
-    main section h2
-    {
-        margin-bottom: var(--dimen-large);
-    }
-
     main .details article
     {
         display: flex;
@@ -567,6 +655,13 @@ main .details article button:hover
     {
         grid-column: span 2;
     }
+
+    /* Delivery Policy */
+    main .section
+    {
+        max-width: 750px;
+    }
+
 }
 
 @media (min-width: 1000px)
@@ -575,8 +670,6 @@ main .details article button:hover
     {
         grid-template-columns: repeat(4, 1fr);
         gap: var(--dimen-large);
-        padding-block: var(--dimen-large);
-        margin-block: var(--dimen-large);
     }
 
     .header-column:nth-of-type(2)
@@ -617,6 +710,7 @@ main .details article button:hover
         order: 2;
         grid-area: auto;
     }
+
 }
 
 

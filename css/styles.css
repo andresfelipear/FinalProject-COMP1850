@@ -528,7 +528,6 @@ main section .breakfasts, main .details article
     display: grid;
     grid-template: auto / auto;
     gap: var(--dimen-medium);
-    padding-bottom: var(--dimen-large);
 }
 
 main section
@@ -552,7 +551,7 @@ main .topic
 }
 
 /* Details Product */
-main .image-container
+main .section .image-container, main .details .image-container
 {
     max-height: 350px;
     max-width: 350px;

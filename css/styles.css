@@ -464,11 +464,6 @@ main .topic
     margin: auto;
 }
 
-main .breakfasts .image-container
-{
-    max-height: 90vw;
-}
-
 main .details article .image-container
 {
     max-height: 350px;
@@ -502,10 +497,6 @@ main .details article button:hover
         gap: var(--dimen-large);
     }
 
-    main .breakfasts .image-container
-    {
-        max-height: 45vw;
-    }
   
     footer .coverage-map
     {
@@ -586,11 +577,6 @@ main .details article button:hover
         gap: var(--dimen-large);
         padding-block: var(--dimen-large);
         margin-block: var(--dimen-large);
-    }
-
-    main .breakfasts .image-container
-    {
-        max-height: 22vw;
     }
 
     .header-column:nth-of-type(2)

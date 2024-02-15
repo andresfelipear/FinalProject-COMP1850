@@ -23,3 +23,17 @@ More on JavaScript in a future lesson
 	});	
 	
 })(document);
+
+function formatPhoneNumber(input) {
+	// Remove non-numeric characters
+	let phoneNumber = input.value.replace(/\D/g, '');
+
+	// Check if the input is not empty
+	if (phoneNumber.length > 0) {
+		// Format the phone number
+		phoneNumber = '(' + phoneNumber.substring(0, 3) + ') ' + phoneNumber.substring(3, 6) + '-' + phoneNumber.substring(6,10);
+	}
+
+	// Update the input value with the formatted phone number
+	input.value = phoneNumber;
+}

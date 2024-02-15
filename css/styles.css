@@ -11,6 +11,9 @@
     --fifth: #E3C8CC;
     --six: #E8E8E8;
     --color-link:#0A0A0A;
+    --color-border-form:#CCC;
+
+    --border-radius-form:5px;
 
     --dimen-small: 8px;
     --dimen-medium: 16px;
@@ -590,33 +593,31 @@ form
     max-width: 350px;
 }
 
-form .input-label-group input{      
-    border-radius: 5px;    
+form .input-label-group input, form .input-label-group textarea{      
+    border: 1px solid var(--color-border-form);
+    border-radius: var(--border-radius-form);
     transition:all .2s ease;
     width: 100%;
     padding: 5px var(--dimen-small);
 }
-
 
 form .input-label-group label
 {
     display: block;
     font-weight: 700;
     margin-block: var(--dimen-small);
-
 }
 
 form input[type="submit"]
 {
     display: block;
     border: none;
-    border-radius: 5px;
+    border-radius: var(--border-radius-form);
     margin-top: var(--dimen-medium);
     margin-inline: auto;
     padding: var(--dimen-small) var(--dimen-medium);
     background-color: var(--primary);
     color: var(--four);
-
 }
 
 form .forgot-link
@@ -628,6 +629,38 @@ form .forgot-link
     text-decoration: none;
     font-weight: 300;
     color: var(--third);
+}
+
+/* Select avatar options */
+.custom-select {
+    position: relative;
+    width: 75px;
+}
+
+.custom-select select {
+    font-family: 'FontAwesome', '"Roboto Condensed"';
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    width: 100%;
+    padding: 8px;
+    border: 1px solid var(--color-border-form);
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.custom-select::after {
+    content: '▼';
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+}
+
+.username-group
+{
+    display: flex;
+    gap: var(--dimen-small);
 }
 
 

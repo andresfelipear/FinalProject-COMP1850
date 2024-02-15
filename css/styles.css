@@ -10,10 +10,13 @@
     --four: #FFFFFF;
     --fifth: #E3C8CC;
     --six: #E8E8E8;
+    --color-link:#0A0A0A;
 
     --dimen-small: 8px;
     --dimen-medium: 16px;
     --dimen-large: 24px;
+    --dimen-xlarge: 32px;
+    --dimen-xxlarge: 48px;
 }
 
 /* all elements box-sizing:border-box; */
@@ -388,7 +391,7 @@ footer .payment-methods
 
 
 /* Border */
-main section article
+main section article, main form
 {
     border-radius: .25rem;
     box-shadow: 0 0.5em 1em -0.125em rgba(10,10,10,.1),
@@ -574,6 +577,59 @@ main .details article button:hover
 {
     cursor: pointer;
 }
+
+/* Forms */
+form
+{
+    background-color: var(--secondary);
+    color: var(--third);    
+    margin-block: var(--dimen-xxlarge);
+    margin-inline: auto;
+    border-radius: 6px;
+    padding: var(--dimen-xlarge) var(--dimen-large);
+    max-width: 350px;
+}
+
+form .input-label-group input{      
+    border-radius: 5px;    
+    transition:all .2s ease;
+    width: 100%;
+    padding: 5px var(--dimen-small);
+}
+
+
+form .input-label-group label
+{
+    display: block;
+    font-weight: 700;
+    margin-block: var(--dimen-small);
+
+}
+
+form input[type="submit"]
+{
+    display: block;
+    border: none;
+    border-radius: 5px;
+    margin-top: var(--dimen-medium);
+    margin-inline: auto;
+    padding: var(--dimen-small) var(--dimen-medium);
+    background-color: var(--primary);
+    color: var(--four);
+
+}
+
+form .forgot-link
+{
+    display: block;
+    margin-top: 3px;
+    font-style: italic;
+    font-size: 14px;
+    text-decoration: none;
+    font-weight: 300;
+    color: var(--third);
+}
+
 
 
 /* Media Queries !! */

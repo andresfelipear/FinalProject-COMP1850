@@ -394,7 +394,7 @@ footer .payment-methods
 
 
 /* Border */
-main section article, main form
+main section article, main .forms
 {
     border-radius: .25rem;
     box-shadow: 0 0.5em 1em -0.125em rgba(10,10,10,.1),
@@ -582,7 +582,7 @@ main .details article button:hover
 }
 
 /* Forms */
-form
+.forms
 {
     background-color: var(--secondary);
     color: var(--third);    
@@ -593,7 +593,7 @@ form
     max-width: 350px;
 }
 
-form .input-label-group input, form .input-label-group textarea{      
+.forms .input-label-group input, form .input-label-group textarea{      
     border: 1px solid var(--color-border-form);
     border-radius: var(--border-radius-form);
     transition:all .2s ease;
@@ -601,14 +601,14 @@ form .input-label-group input, form .input-label-group textarea{
     padding: 5px var(--dimen-small);
 }
 
-form .input-label-group label
+.forms .input-label-group label
 {
     display: block;
     font-weight: 700;
     margin-block: var(--dimen-small);
 }
 
-form input[type="submit"]
+.forms input[type="submit"]
 {
     display: block;
     border: none;
@@ -620,7 +620,7 @@ form input[type="submit"]
     color: var(--four);
 }
 
-form .forgot-link
+.forms .forgot-link
 {
     display: block;
     margin-top: 3px;
